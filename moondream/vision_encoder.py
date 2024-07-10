@@ -107,7 +107,7 @@ class VisionEncoder(nn.Module):
         self.preprocess = Compose(
             [
                 Resize(size=(378, 378), interpolation=InterpolationMode.BICUBIC),
-                ToImage(),
+                #ToImage(),
                 ToDtype(torch.float32, scale=True),
                 Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
             ]
